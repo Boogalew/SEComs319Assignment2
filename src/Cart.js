@@ -10,6 +10,23 @@ function Cart() {
     const cartFromProps = location.state?.cart;
     console.log(location);
 
+    useEffect(() => {
+        total();
+    }, [cartFromProps]);
+
+    const total = () => {
+        let totalVal = 0;
+        for (let i = 0; i < cartFromProps.length; i++) {
+            totalVal += cartFromProps[i].price;
+        }
+        setCartTotal(totalVal);
+    };
+
+    function howManyofThis(id) {
+        let hmot = cartFromProps.filter((cartItem) => cartItem.id === id);
+        return hmot.length;
+    }
+
     const cartItems = cartFromProps.map((el) => (
         <div key={el.id}>
             <div class="row border-top border-bottom" key={el.id}>
@@ -29,19 +46,6 @@ function Cart() {
             </div>
         </div>
     ));
-
-    const total = () => {
-        let totalVal = 0;
-        for (let i = 0; i < cartFromProps.length; i++) {
-            totalVal += cartFromProps[i].price;
-        }
-        setCartTotal(totalVal);
-    };
-
-    function howManyofThis(id) {
-        let hmot = cartFromProps.filter((cartItem) => cartItem.id === id);
-        return hmot.length;
-    }
 
     return (
         <div class="card">
@@ -63,12 +67,12 @@ function Cart() {
                     <div>
                         <Link to="/" state={{ cart: cartFromProps }}>
                             <button>
-                            Return
+                                Return
                             </button>
                         </Link>
                         <Link to="/Confirmation" state={{ cart: cartFromProps }}>
                             <button>
-                            Order
+                                Order
                             </button>
                         </Link>
                     </div>
