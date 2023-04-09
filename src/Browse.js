@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { 
-    Link  
-  }   
-  from 'react-router-dom'; 
+import {
+    Link
+}
+    from 'react-router-dom';
 import items from "./11_2_21_selected_products.json"
 
 const Browse = () => {
     const [cart, setCart] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
+    const [searchTerm, setSearchTerm] = useState("");
+
 
     useEffect(() => {
         total();
@@ -38,7 +40,16 @@ const Browse = () => {
         return hmot.length;
     }
 
-    const listItems = items.map((el) => (
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const filteredItems = items.filter((item) => {
+        return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+
+
+    const listItems = filteredItems.map((el) => (
         // PRODUCT
         <div class="row border-top border-bottom" key={el.id}>
             <div class="row main align-items-center">
@@ -75,6 +86,13 @@ const Browse = () => {
                                     </h4>
                                 </div>
                                 <div class="col align-self-center text-right text-muted">
+                                    <input
+                                        type="text"
+                                        placeholder="Search"
+                                        value={searchTerm}
+                                        onChange={handleSearch}
+                                    />
+
                                     Products selected {cart.length}
                                 </div>
                             </div>
@@ -84,7 +102,7 @@ const Browse = () => {
                     <div>
                         <Link to="/Cart" state={{ cart: cart }}>
                             <button>
-                            Checkout
+                                Checkout
                             </button>
                         </Link>
                     </div>
