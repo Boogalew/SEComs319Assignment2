@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { 
+    Link  
+  }   
+  from 'react-router-dom'; 
 import items from "./11_2_21_selected_products.json"
 
 const Browse = () => {
@@ -17,6 +21,7 @@ const Browse = () => {
         setCartTotal(totalVal);
     };
 
+
     const addToCart = (el) => {
         setCart([...cart, el]);
     };
@@ -27,13 +32,6 @@ const Browse = () => {
         setCart(hardCopy);
     };
 
-    const cartItems = cart.map((el) => (
-        <div key={el.id}>
-            <img class="img-fluid" src={el.image} width={30} />
-            {el.title}
-            ${el.price}
-        </div>
-    ));
 
     function howManyofThis(id) {
         let hmot = cart.filter((cartItem) => cartItem.id === id);
@@ -83,6 +81,13 @@ const Browse = () => {
                         </div>
                         <div>{listItems}</div>
                     </div>
+                    <div>
+                        <Link to="/Cart" state={{ cart: cart }}>
+                            <button>
+                            Checkout
+                            </button>
+                        </Link>
+                    </div>
                     <div class="float-end">
                         <p class="mb-0 me-5 d-flex align-items-center">
                             <span class="small text-muted me-2">Order total:</span>
@@ -93,7 +98,7 @@ const Browse = () => {
             </div>
         </div>
     );
-    
+
 };
 
 export default Browse;

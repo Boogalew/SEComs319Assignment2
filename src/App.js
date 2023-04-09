@@ -15,7 +15,6 @@ import Confirmation from "./Confirmation.js"
 function App() {
    return (
       <Router>
-         <NavBar />
          <Routes>
             <Route path="/" element={<Browse />} />
             <Route path="/Cart" element={<Cart />} />
@@ -25,7 +24,7 @@ function App() {
   );
 }
 
-function NavBar() {
+/*function NavBar() {
    return (
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
        <a class="navbar-brand" href="#">Assignment Two Shop</a>
@@ -44,6 +43,6 @@ function NavBar() {
        </div>
      </nav>
    );
- }
+ }*/
 
 export default App;
