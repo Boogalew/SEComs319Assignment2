@@ -45,7 +45,7 @@ const Browse = () => {
     };
 
     const filteredItems = items.filter((item) => {
-        return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+        return item.title.toLowerCase().includes(searchTerm.toLowerCase()) || item.category.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
 
