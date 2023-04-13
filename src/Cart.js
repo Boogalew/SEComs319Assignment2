@@ -1,3 +1,5 @@
+//The Checkout Screen
+
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from 'react-router-dom'
 
@@ -79,7 +81,7 @@ function Cart() {
                     <div>
                         <p class="mb-0 me-5 d-flex align-items-center">
                             <span class="small text-muted me-2">Order total:</span>
-                            <span class="lead fw-normal">${cartTotal}</span>
+                            <span class="lead fw-normal">${cartTotal} + $1.50 Tax = ${cartTotal + 1.5} Total </span>
                         </p>
                     </div>
                 </div>

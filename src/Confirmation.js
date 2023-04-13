@@ -34,7 +34,7 @@ const Confirmation = () => {
                     </div>
 
                     <div class="col">
-                        <div class="row text-muted">{el.title}</div>
+                        <div class="row text-muted">{"BREAK"}</div>
                         <div class="row">{el.category}</div>
                     </div>
                     <div class="col">

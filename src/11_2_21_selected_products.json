@@ -100,11 +100,20 @@
     },
     {
       "id": 12,
-      "title": "Baked Alaska",
-      "price": 30,
-      "description": "The turtle can have a little baked alaska. As a treat.",
+      "title": "Salami",
+      "price": 25,
+      "description": "The turtle can have a little salami. As a treat.",
       "category": "Pet Food",
-      "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/6/17/2/FNM080109Cover021_pink_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383254816256.jpeg",
+      "image": "https://cdn.shopify.com/s/files/1/2369/6559/products/IMG_4449_2892x.JPG?v=1585768913",
+      "rating": { "rate": 3.0, "count": 137 }
+    },
+    {
+      "id": 12,
+      "title": "Caviar",
+      "price": 125,
+      "description": "Caviar is for classy turtles. The pet food for the elite.",
+      "category": "Pet Food",
+      "image": "https://cdn.shopify.com/s/files/1/0077/8233/4549/products/1409937590028391411_1400x.jpg?v=1561097890",
       "rating": { "rate": 3.0, "count": 137 }
     }
   ]

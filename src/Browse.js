@@ -59,6 +59,7 @@ const Browse = () => {
                 <div class="col">
                     <div class="row text-muted">{el.title}</div>
                     <div class="row">{el.category}</div>
+                    
                 </div>
                 <div class="col">
                     <button type="button" variant="light" onClick={() => removeFromCart(el)} > - </button>{" "}
@@ -73,7 +74,7 @@ const Browse = () => {
 
     return (
         <div>
-            STORE SE/ComS319
+            <h1><center>Very legitimate Turtle Store <span class="small text-muted me-2">(CS 319)</span></center></h1>
             <div class="card">
                 <div class="row">
                     {/* HERE, IT IS THE SHOPING CART */}
@@ -82,7 +83,7 @@ const Browse = () => {
                             <div class="row">
                                 <div class="col">
                                     <h4>
-                                        <b>319 Shopping Cart</b>
+                                        <b>Turtle Shopping Cart</b>
                                     </h4>
                                 </div>
                                 <div class="col align-self-center text-right text-muted">
