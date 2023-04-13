@@ -1,4 +1,4 @@
-
+//The
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from 'react-router-dom'
 
@@ -34,8 +34,8 @@ const Confirmation = () => {
                     </div>
 
                     <div class="col">
-                        <div class="row text-muted">{"BREAK"}</div>
-                        <div class="row">{el.category}</div>
+                        <div class="row text-muted">{el.title}</div>
+                        <div class="row">{el.category}</div>  
                     </div>
                     <div class="col">
                         ${el.price} <span class="close">&#10005;</span>{howManyofThis(el.id)}
@@ -72,7 +72,7 @@ const Confirmation = () => {
                     <div>
                         <p class="mb-0 me-5 d-flex align-items-center">
                             <span class="small text-muted me-2">Order total:</span>
-                            <span class="lead fw-normal">${cartTotal}</span>
+                            <span class="lead fw-normal">${cartTotal} + $1.50 Tax = ${cartTotal + 1.5} Total </span>
                         </p>
                     </div>
                 </div>

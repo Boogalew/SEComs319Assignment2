@@ -60,6 +60,7 @@ const Browse = () => {
                     <div class="row text-muted">{el.title}</div>
                     <div class="row">{el.category}</div>
                     
+                    
                 </div>
                 <div class="col">
                     <button type="button" variant="light" onClick={() => removeFromCart(el)} > - </button>{" "}
